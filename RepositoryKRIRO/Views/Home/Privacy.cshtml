@@ -1,0 +1,20 @@
+﻿@model List<Practice>
+@{
+    ViewData["Title"] = "Практики";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="text-left">
+    <p>Информация используется с сайта <a href="https://komiedu.ru/">komiedu.ru</a>.</p>
+    <div class="container">
+    @foreach (var practice in Model)
+    {
+        <p>
+            <div>
+                <a href="@practice.Link">@practice.Name</a>
+                <p> @practice.Author</p>
+                <p> @practice.Place</p>
+            </div>
+        </p> 
+    }
+    </div>
+</div>

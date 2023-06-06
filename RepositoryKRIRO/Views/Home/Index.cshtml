@@ -1,0 +1,21 @@
+﻿@model List<News>
+@{
+    ViewData["Title"] = "Новости";
+}
+
+<div class="text-left">
+    <h1>Новости КРИРО</h1>
+    <p>Информация используется с сайта <a href="https://kriro.ru/">kriro.ru</a>.</p>
+    <div class="container">
+    @foreach (var news in Model)
+    {
+        <p>
+            <div>
+            <a href="@news.Link">@news.Name</a>
+            <p> @news.Date</p>
+            <p> @news.Description</p>
+            </div>
+        </p> 
+    }
+    </div>
+</div>
